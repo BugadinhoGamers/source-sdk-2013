@@ -308,6 +308,10 @@ void RecvProxy_Int32ToInt32  ( const CRecvProxyData *pData, void *pStruct, void 
 void RecvProxy_Int64ToInt64  ( const CRecvProxyData *pData, void *pStruct, void *pOut );
 #endif
 
+//sunlightshadowctrl
+void RecvProxy_Int32ToColor32( const CRecvProxyData *pData, void *pStruct, void *pOut );
+
+
 // StaticDataTable does *pOut = pData.
 void DataTableRecvProxy_StaticDataTable(const RecvProp *pProp, void **pOut, void *pData, int objectID);
 
