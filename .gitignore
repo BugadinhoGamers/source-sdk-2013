@@ -53,4 +53,8 @@ config.cfg
 
 # shader files
 *.tmp
+*.mdl
+*.bsp
+*.vmt
+*.vtf
 
