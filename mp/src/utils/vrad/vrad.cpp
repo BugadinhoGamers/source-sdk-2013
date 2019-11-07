@@ -115,9 +115,9 @@ qboolean	g_bLowPriority = false;
 qboolean	g_bLogHashData = false;
 bool		g_bNoDetailLighting = false;
 double		g_flStartTime;
-bool		g_bStaticPropLighting = false;
-bool        g_bStaticPropPolys = false;
-bool        g_bTextureShadows = false;
+bool		g_bStaticPropLighting = true;
+bool        g_bStaticPropPolys = true;
+bool        g_bTextureShadows = true;
 bool        g_bDisablePropSelfShadowing = false;
 
 
@@ -238,6 +238,9 @@ void ReadLightFile (char *filename)
 		}
 		else
 		{
+			ForceTextureShadowsOnModel( NoShadName );
+			
+			/*
 			char szTexlight[256];
 			Vector value;
 			if ( num_texlights == MAX_TEXLIGHTS )
@@ -285,6 +288,7 @@ void ReadLightFile (char *filename)
 			file_texlights ++;
 			
 			num_texlights = max( num_texlights, j + 1 );
+			*/
 		}
 	}
 	qprintf ( "[%i texlights parsed from '%s']\n\n", file_texlights, filename);
@@ -2893,7 +2897,7 @@ int RunVRAD( int argc, char **argv )
 	Msg("Valve Software - vrad.exe (" __DATE__ ")\n" );
 #endif
 
-	Msg("\n      Valve Radiosity Simulator     \n");
+	Msg("\n      Bugadinho's Modified Radiosity Simulator     \n");
 
 	verbose = true;  // Originally FALSE
 

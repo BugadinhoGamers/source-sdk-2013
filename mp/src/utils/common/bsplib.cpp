@@ -4556,6 +4556,7 @@ bool CompressGameLump( dheader_t *pInBSPHeader, dheader_t *pOutBSPHeader, CUtlBu
 //-----------------------------------------------------------------------------
 bool RepackBSPCallback_LZMA( CUtlBuffer &inputBuffer, CUtlBuffer &outputBuffer )
 {
+	#ifndef PROPPER
 	if ( !inputBuffer.TellPut() )
 	{
 		// nothing to do
@@ -4575,6 +4576,9 @@ bool RepackBSPCallback_LZMA( CUtlBuffer &inputBuffer, CUtlBuffer &outputBuffer )
 	}
 
 	return false;
+	#else
+	return true;
+	#endif
 }
 
 

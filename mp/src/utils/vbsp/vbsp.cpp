@@ -907,6 +907,7 @@ int RunVBSP( int argc, char **argv )
 	LoadCmdLineFromFile( argc, argv, mapbase, "vbsp" );
 
 	Msg( "Valve Software - vbsp.exe (%s)\n", __DATE__ );
+	Msg("\n      Bugadinho's Modified VBSP     \n");
 
 	for (i=1 ; i<argc ; i++)
 	{

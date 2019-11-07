@@ -1077,6 +1077,7 @@ int RunVVis( int argc, char **argv )
 
 
 	Msg( "Valve Software - vvis.exe (%s)\n", __DATE__ );
+	Msg("\n      Bugadinho's Modified VVIS    \n");
 
 	verbose = false;
 
