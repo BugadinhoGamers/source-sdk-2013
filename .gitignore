@@ -5,6 +5,7 @@
 *.user
 *.sln.docstates
 *.obj
+*.obj.enc
 *.pch
 *.tlog
 *.log
@@ -13,12 +14,18 @@
 *.ilk
 *.lastbuildstate
 vc100.pdb
+vc120.pdb
 ipch
 *.sdf
 *.opensdf
 *.idb
 *.vcxproj
+*.vcxproj.filters
 *.sln
+.vs/
+
+# CodeLite		
+*.project
 
 # OSX/Linux build products
 *.mak
@@ -27,6 +34,10 @@ ipch
 obj*/
 !devtools/*.mak
 !utils/smdlexp/smdlexp.mak
+
+# VPC
+*.vcxproj.vpc_crc
+*.vpc.sentinel
 
 # Specific Source build products
 client.pdb
@@ -58,3 +69,14 @@ config.cfg
 *.vmt
 *.vtf
 
+# Compile products
+*.exe
+*.dll
+*.lib
+*.pdb
+*.so
+*.so.dbg
+*.dylib
+*.dylib.dSYM/
+!devtools/bin/*.exe
+!devtools/bin/*.dll
